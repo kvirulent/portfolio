@@ -1,22 +1,21 @@
-// Counter component. Uses goatcounter as a backend.
-async function fetchJSON(file: string) {
-  try {
-    const response = await fetch(file);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("JSON fetch failed:", error);
-    throw error;
-  }
-}
+// Simple visitor count component, returns <p>#visits</p>
+// Uses goatcounter for the data
+"use client";
+import { useState, useEffect } from 'react';
+
 
 const GoatCounter = () => {
-  const visits = fetchJSON(
-    "https://xirulent.goatcounter.com/counter//.json"
-  ).then((self) => {
-    return self.count_unique;
-  });
-  return <p>{visits}</p>;
+  const [uniqueVisits, setUniqueVisits] = useState(null);
+  const [nonUniqueVisits, setNonUniqueVisits] = useState(null);
+
+  useEffect(() => { // VV replace with your own analytics API!!!
+    fetch("https://xirulent.goatcounter.com/counter//.json").then((res) => res.json().then((data) => {
+      setUniqueVisits(data.count_unique);
+      setNonUniqueVisits(data.count);
+    }))
+  })
+
+  return <p>{uniqueVisits ? uniqueVisits : "Loading..."}</p>;
 };
 
 export default GoatCounter;

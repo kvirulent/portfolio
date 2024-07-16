@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className="text-6xl">xirulent.dev</h1>
           <ul className="">
             <li className=" m-5 w-fit hover:box- hover:bg-[#FFB000] hover:text-black">
-              <Link href="#">&gt; who r u?</Link>
+              <Link href="/about-me">&gt; who r u?</Link>
             </li>
             <li className=" m-5 w-fit hover:box- hover:bg-[#FFB000] hover:text-black">
               <Link href="#">&gt; where am i?</Link>
