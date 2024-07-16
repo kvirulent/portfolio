@@ -1,5 +1,5 @@
 // Simple visitor count component, returns <p>#visits</p>
-// Uses goatcounter for the data
+// Uses goatcounter for the data.
 "use client";
 import { useState, useEffect } from 'react';
 

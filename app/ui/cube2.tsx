@@ -1,4 +1,4 @@
-// Renders a cube in ASCII. Some variable names aren't descriptive- sorry.
+// Renders a cube in ASCII. Some variable names aren't descriptive. Sorry.
 import { useEffect, useState } from "react";
 
 const CubeAnimation = (props: { size: number }) => {
