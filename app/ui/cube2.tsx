@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 const CubeAnimation = (props: {size: number}) => {
   const [frame, setFrame] = useState<string>('');
 
-  useEffect(() => {
+  useEffect((size: number = props.size) => {
     const width: number = 160;
     const height: number = 44;
     const backgroundASCIICode: string = ' ';
-    const distanceFromCam: number = props.size;
+    const distanceFromCam: number = size;
     const K1: number = 60;
     const incrementSpeed: number = 0.6;
 
