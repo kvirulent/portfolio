@@ -9,7 +9,7 @@ export default function Home() {
     <main className="min-h-screen text-amber glow">
       {/* Startup Content */}
       <div>
-        {/*<Startup />*/}
+        <Startup />
       </div>
 
       {/* Page Content */}
