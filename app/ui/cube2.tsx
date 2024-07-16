@@ -84,7 +84,6 @@ const CubeAnimation = (props: { size: number }) => {
         output_buffer += buffer[k];
         if ((k + 1) % width === 0) {
           output_buffer += "\n";
-          console.log(output_buffer);
           if (output == " ") {
             continue;
           }
