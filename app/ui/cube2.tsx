@@ -5,7 +5,7 @@ const CubeAnimation = (props: { size: number }) => {
   const [frame, setFrame] = useState<string>("");
 
   useEffect((size: number = props.size) => {
-    const width: number = 160;
+    const width: number = 130;
     const height: number = 44;
     const backgroundASCIICode: string = " ";
     const distanceFromCam: number = size;
@@ -79,21 +79,16 @@ const CubeAnimation = (props: { size: number }) => {
 
     const renderFrame = (): void => {
       let output: string = "";
-      let output_buffer: string = "";
       for (let k: number = 0; k < width * height; k++) {
-        output_buffer += buffer[k];
+        output += buffer[k];
         if ((k + 1) % width === 0) {
-          output_buffer += "\n";
-          if (output == " ") {
-            continue;
-          }
-          output += output_buffer;
-          output_buffer = "";
+          output += "\n";
         }
       }
       output = output
         .split("\n")
         .map((line) => line.trimEnd())
+        .filter((line) => line !== "")
         .join("\n");
       setFrame(output.trimEnd());
     };
