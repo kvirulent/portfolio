@@ -1,5 +1,22 @@
+// Counter component. Uses goatcounter as a backend.
+async function fetchJSON(file: string) {
+  try {
+    const response = await fetch(file);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("JSON fetch failed:", error);
+    throw error;
+  }
+}
+
 const GoatCounter = () => {
-    return <p className="absolute text-white bottom-0 left-0 p-2"><script data-goatcounter="https://xirulent.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></p>
+  const visits = fetchJSON(
+    "https://xirulent.goatcounter.com/counter//.json"
+  ).then((self) => {
+    return self.count_unique;
+  });
+  return <p>{visits}</p>;
 };
 
 export default GoatCounter;

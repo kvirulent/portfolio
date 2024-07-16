@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
+import Script from "next/script";
 import GoatCounter from "@/app/ui/goatcounter";
+import Link from "next/link";
 import "./globals.css";
 
 const scp = Source_Code_Pro({ subsets: ["latin"] });
@@ -17,9 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        data-goatcounter="https://xirulent.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      />
       <body className={`crt ${scp.className}`}>
-        <GoatCounter />
-        <div className=""> {/* Page Content */}
+        <Link
+          href="https://www.goatcounter.com/"
+          className="absolute left-0 bottom-0 text-amber glow p-2"
+        >
+          <GoatCounter />
+        </Link>
+        <div>
+          {" "}
+          {/* Page Content */}
           {children}
         </div>
       </body>
