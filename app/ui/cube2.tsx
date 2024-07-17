@@ -127,7 +127,7 @@ const CubeAnimation = (props: { size: number }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []); // Only run once on component mount
+  }, [props.size]); // Only run once on component mount
 
   return <pre>{frame}</pre>;
 };
