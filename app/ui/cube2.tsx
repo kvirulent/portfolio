@@ -1,3 +1,4 @@
+"use client";
 // Renders a cube in ASCII. Some variable names aren't descriptive. Sorry.
 import { useEffect, useState } from "react";
 

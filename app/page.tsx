@@ -1,4 +1,3 @@
-"use client";
 import Startup from "@/app/ui/startup";
 import Link from "next/link";
 import CubeAnimation from "@/app/ui/cube2";
