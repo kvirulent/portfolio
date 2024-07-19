@@ -19,12 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Goatcounter count script */}
       <Script
         data-goatcounter="https://xirulent.goatcounter.com/count"
         async
         src="//gc.zgo.at/count.js"
       />
       <body className={`crt ${scp.className}`}>
+        {/* Goatcounter count display */}
         <Link
           href="https://www.goatcounter.com/"
           className="absolute left-0 bottom-0 text-amber glow p-2"
@@ -32,7 +34,6 @@ export default function RootLayout({
           <GoatCounter />
         </Link>
         <div>
-          {" "}
           {/* Page Content */}
           {children}
         </div>

@@ -2,6 +2,7 @@
 //@ts-nocheck Ignore that some Typewriter components are missing optional attributes.
 "use client";
 import { useState, useEffect } from "react";
+import { cookies } from "next/headers";
 import Typewriter from "@/app/ui/typewriter";
 
 const Startup = () => {
@@ -21,7 +22,7 @@ const Startup = () => {
     /* SHUT TH EFUCK UP TYPESCRIPT!!!!!11!! */
   }
   return (
-    <div className={isActive ? "text-console-green glow fixed inset-0 z-50 p-4 opacity-100 pointer-events-none whitespace-pre" : "hidden"}>
+    <div className={isActive ? "text-console-green glow fixed inset-0 z-[50] p-4 opacity-100 pointer-events-none whitespace-pre leading-[20px]" : "hidden"}>
         <p>c:\system\notporn&gt; <Typewriter text="cd .." delay={100} begin_delay={10} /></p>
         <Typewriter text="c:\system\>" delay={0} begin_delay={530} /> <Typewriter text="cd tools" delay="100" begin_delay={620} /> <br/>
         <Typewriter text="c:\system\tools>" delay={0} begin_delay={1560} /> <Typewriter text="neofetch" delay={100} begin_delay={1620} /> <br/> <br/>

@@ -4,13 +4,10 @@ import Link from "next/link";
 import CubeAnimation from "@/app/ui/cube2";
 
 export default function Home() {
-
   return (
     <main className="min-h-screen text-amber glow">
       {/* Startup Content */}
-      <div className="hidden md:default">
-        <Startup />
-      </div>
+      <div>{/*<Startup />*/}</div>
 
       {/* Page Content */}
       <div className="flex items-center justify-center">
@@ -19,7 +16,7 @@ export default function Home() {
             <CubeAnimation size={190} />
           </div>
         </div>
-        <div className="md:flex-1 h-screen flex flex-col z-[10] items-center justify-center">
+        <div className="md:flex-1 h-screen flex flex-col items-center justify-center">
           <h1 className="text-4xl md:text-6xl m-5">xirulent.dev</h1>
           <ul>
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
