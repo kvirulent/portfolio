@@ -1,27 +1,34 @@
-"use client";
-import { useState, useEffect } from 'react';
+"use client"
+// Blinks the the inner text of the implementation
+import { useState, useEffect } from "react";
 
-const Blinker = (props: { text: string; interval: number; delay: number; }) => {
-    const [visible, setVisibility] = useState(false);
+interface BlinkerProps {
+    interval: number;
+    delay: number;
+    children: React.ReactNode;
+}
+
+const Blinker = ({interval, delay, children}: BlinkerProps) => {
+    const [active, setActive] = useState(false);
 
     useEffect(() => {
-        function toggleVisibility() {
-            setVisibility(!visible)
-        }    
+        function toggleActive() {
+            setActive(!active)
+        }
 
         setTimeout(() => {
             const intervalId = setInterval(() => {
-                toggleVisibility()
-            }, 1200)
+                toggleActive()
+            }, interval)
             return () => {
                 clearInterval(intervalId);
             };
-        }, props.delay); 
-    }, [props.delay, visible]);
+        }, delay);
+    }, [active, delay, interval])
 
     return (
-        <p className={visible ? "inline-block" : "hidden"}>{props.text}</p>
-    )
-}
+        <pre className="inline-block">{active ? children : " ".repeat(children?.toString().length ? children?.toString().length : 0)}</pre>
+    );
+};
 
 export default Blinker;

@@ -6,8 +6,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen text-amber glow">
-      {/* Startup Content */}
-      <div className="hidden md:default">
+      {/* Startup Content -> Why is this constantly disabled?? */}
+      <div className="hidden md:fixed">
         <Startup />
       </div>
 

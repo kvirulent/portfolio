@@ -9,7 +9,7 @@ const TypewriterPre = (props: {
   begin_delay: number | 0;
   infinite_delay: number | 0;
 }) => {
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(" ".repeat(props.text.length));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
 

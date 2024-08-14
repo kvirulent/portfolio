@@ -1,83 +1,15 @@
 import TypewriterPre from "@/app/ui/typewriter-pre";
+import Blinker from "@/app/ui/blinker";
+
 const Page = () => {
   return (
     <main className="flex w-screen items-center justify-center flex-col glow text-amber">
         <div className="m-5 flex w-fill h-fit items-center justify-center flex-row glow text-amber">
-          <div className="w-fill text-center">
-            hi
-          </div>
           <div className="flex-1">
-            <p className="text-4xl">
-              xirulent
-            </p>
+            <div className="text-4xl">
+              xirulent<Blinker interval={500} delay={0}>_</Blinker>
+            </div>
           </div>
-        </div>
-        <div>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-        hi <br/>
-          
         </div>
     </main>
   );
