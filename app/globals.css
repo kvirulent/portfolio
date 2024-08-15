@@ -10,12 +10,21 @@
   --apple-3c: 102, 255, 102;
   --amber: 255, 176, 0;
   --amber-dim: 255, 174, 0, 0.34;
+  --red: 251, 0, 0, 0.59
 }
 
 /* Add a simple glowing box utility */
 @layer utilities {
   :root {
     --amber-dim: 255, 174, 0, 0.34;
+  }
+
+  .bg-invisible {
+    background-color: rgba(40,40,40,1)
+  }
+
+  .background {
+    background-color: rgb(var(--background-rgb))
   }
 
   .noglow {
@@ -28,10 +37,19 @@
     background-color: rgb(var(--amber));
   }
 
+  .box-glow-invalid {
+    box-shadow: 0px 0px 5px 2px rgba(var(--red));
+    background-color: rgb(var(--red));
+  }
+
   /* Class for amber text */
   .text-amber {
     color: rgb(var(--amber));
     background-color: rgb(var(--background-rgb));
+  }
+
+  .text-white{
+    color: white;
   }
 
   /* Class for amber text but dimmer */

@@ -25,11 +25,12 @@ export default function RootLayout({
         async
         src="//gc.zgo.at/count.js"
       />
-      <body className={`crt ${scp.className}`}>
+      <body className={`${scp.className}`}>
+        <div className="crt fixed w-screen h-screen fixed z-[50] pointer-events-none"></div>
         {/* Goatcounter count display */}
         <Link
           href="https://www.goatcounter.com/"
-          className="absolute left-0 bottom-0 text-amber glow p-2"
+          className="fixed left-0 bottom-0 text-amber glow p-2"
         >
           <GoatCounter />
         </Link>

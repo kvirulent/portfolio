@@ -1,11 +1,11 @@
+// Blinks the the text between the openning and closing tags. Untested when using components as children.
 "use client"
-// Blinks the the inner text of the implementation
 import { useState, useEffect } from "react";
 
 interface BlinkerProps {
-    interval: number;
-    delay: number;
-    children: React.ReactNode;
+    interval: number,
+    delay?: number,
+    children: React.ReactNode,
 }
 
 const Blinker = ({interval, delay, children}: BlinkerProps) => {

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen text-amber glow">
       {/* Startup Content -> Why is this constantly disabled?? */}
-      <div className="hidden md:fixed">
+      <div className="">
         <Startup />
       </div>
 
@@ -27,11 +27,11 @@ export default function Home() {
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
               <Link href="#">&gt; where am i?</Link>
             </li>
-            <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
-              <Link href="#">&gt; option_3</Link>
+            <li className="m-5 w-fit hover:box-glow-invalid hover:text-white">
+              <Link href="#">⚿ option_3</Link>
             </li>
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
-              <Link href="/pages/webring">&gt; webring</Link>
+              <Link href="/pages/webring">&gt; frendz</Link>
             </li>
           </ul>
         </div>

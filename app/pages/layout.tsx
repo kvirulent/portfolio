@@ -8,7 +8,7 @@ const Layout = ({
 
     return (
         <div className="min-h-screen flex justify-center">
-            <Nano previous_route="/" />
+            <Nano />
             <div className="m-5">
                 {children}
             </div>

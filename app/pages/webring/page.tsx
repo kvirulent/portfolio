@@ -1,9 +1,9 @@
-import Blinker from "@/app/ui/blinker";
+import Scramble from "@/app/ui/scramble";
 
 const Page = () => {
   return (
     <>
-      Hello <Blinker interval={1000} delay={0}>World</Blinker>!
+      Hello <Scramble interval={600}>World</Scramble>!
     </>
   );
 };

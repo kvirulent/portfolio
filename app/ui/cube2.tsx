@@ -1,12 +1,16 @@
-"use client";
 // Renders a cube in ASCII. Some variable names aren't descriptive. Sorry.
 // Adapted from Servet Gulnaroglu's cube.c -> https://github.com/servetgulnaroglu/cube.c
+"use client";
 import { useEffect, useState } from "react";
 
-const CubeAnimation = (props: { size: number }) => {
+interface CubeProps {
+  size?: number
+}
+
+const CubeAnimation = ({ size = 190 }: CubeProps) => {
   const [frame, setFrame] = useState<string>("loading cube2.tsx");
 
-  useEffect((size: number = props.size) => {
+  useEffect(() => {
     const width: number = 130;
     const height: number = 44;
     const backgroundASCIICode: string = " ";
@@ -129,7 +133,7 @@ const CubeAnimation = (props: { size: number }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [props.size]); // Only run once on component mount
+  }, [size]); // Only run once on component mount
 
   return <pre>{frame}</pre>;
 };

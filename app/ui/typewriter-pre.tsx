@@ -1,15 +1,18 @@
-// Component that "types" text into a tag.
+// Component that "types" text into a tag. This component preserves whitespace using a <pre> tag.
 "use client";
 import { useState, useEffect } from "react";
 
-const TypewriterPre = (props: {
-  text: string;
-  delay: number;
-  infinite: boolean | false;
-  begin_delay: number | 0;
-  infinite_delay: number | 0;
-}) => {
-  const [currentText, setCurrentText] = useState(" ".repeat(props.text.length));
+interface TypewriterProps {
+  interval?: number,
+  infinite?: boolean,
+  begin_delay?: number,
+  infinite_delay?: number,
+  children: React.ReactNode
+}
+
+const TypewriterPre = ({ interval = 0, infinite = false, begin_delay = 0, infinite_delay = 0, children}: TypewriterProps) => {
+  const text = children?.toString() || "";
+  const [currentText, setCurrentText] = useState(" ".repeat(text.length));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -19,29 +22,21 @@ const TypewriterPre = (props: {
     if (!isTyping) {
       timeout = setTimeout(() => {
         setIsTyping(true);
-      }, props.begin_delay);
-    } else if (currentIndex < props.text.length) {
+      }, begin_delay);
+    } else if (currentIndex < text.length) {
       timeout = setTimeout(() => {
-        setCurrentText((prevText) => prevText + props.text[currentIndex]);
+        setCurrentText((prevText) => prevText + text[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, props.delay);
-    } else if (props.infinite) {
+      }, interval);
+    } else if (infinite) {
       timeout = setTimeout(() => {
         setCurrentIndex(0);
         setCurrentText("");
-      }, props.infinite_delay);
+      }, infinite_delay);
     }
 
     return () => clearTimeout(timeout);
-  }, [
-    currentIndex,
-    props.delay,
-    props.begin_delay,
-    props.infinite,
-    props.infinite_delay,
-    isTyping,
-    props.text,
-  ]);
+  }, [currentIndex, isTyping, text, infinite, begin_delay, infinite_delay, interval]);
 
   return <pre>{currentText}</pre>;
 };

@@ -6,9 +6,6 @@ import CubeAnimation from "@/app/ui/cube2";
 export default function Home() {
   return (
     <main className="min-h-screen text-amber glow">
-      {/* Startup Content */}
-      <div>{/*<Startup />*/}</div>
-
       {/* Page Content */}
       <div className="flex items-center justify-center">
         <div className="text-amber-dim md:text-amber max-md:w-fit max-md:mx-auto max-md:absolute md:flex-1 h-screen flex items-center justify-center">
@@ -23,13 +20,13 @@ export default function Home() {
               <Link href="/pages/about-me">&gt; who r u?</Link>
             </li>
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
-              <Link href="#">&gt; where am i?</Link>
+              <Link href="#">&gt; where r u?</Link>
+            </li>
+            <li className="m-5 w-fit hover:box-glow-invalid hover:text-white">
+              <Link href="#">⚿ option_3</Link>
             </li>
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
-              <Link href="#">&gt; option_3</Link>
-            </li>
-            <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
-              <Link href="/pages/webring">&gt; webring</Link>
+              <Link href="/pages/webring">&gt; frendz</Link>
             </li>
           </ul>
         </div>
