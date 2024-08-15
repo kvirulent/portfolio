@@ -10,7 +10,7 @@ const Startup = () => {
   }
 
   return (
-    <div className={active ? "fixed background inset-0 z-[50] p-4 opacity-100 flex flex-col justify-center items-center" : "hidden"}>
+    <div className={active ? "fixed background inset-0 z-[40] p-4 opacity-100 flex flex-col justify-center items-center" : "hidden"}>
       <p className="text-lg md:text-3xl text-center">THIS WEBSITE IS NOT INTENDED FOR MOBILE PLATFORMS (yet)</p>
       <p className="cursor-pointer hover:box-glow hover:text-black" onClick={disable}>[  OK  ]</p>
     </div>
