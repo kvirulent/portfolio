@@ -1,4 +1,4 @@
-// Renders a cube in ASCII. Some variable names aren't descriptive. Sorry.
+// Renders a cube in ASCII.
 // Adapted from Servet Gulnaroglu's cube.c -> https://github.com/servetgulnaroglu/cube.c
 "use client";
 import { useEffect, useState } from "react";

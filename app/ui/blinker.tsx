@@ -27,7 +27,7 @@ const Blinker = ({interval, delay, children}: BlinkerProps) => {
     }, [active, delay, interval])
 
     return (
-        <pre className="inline-block">{active ? children : " ".repeat(children?.toString().length ? children?.toString().length : 0)}</pre>
+        <pre className="inline-block">{active ? children : " ".repeat(children?.toString().length || 0)}</pre>
     );
 };
 

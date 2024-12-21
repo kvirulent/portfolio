@@ -12,7 +12,7 @@ interface TypewriterProps {
 
 const Typewriter = ({ interval = 0, infinite = false, begin_delay = 0, infinite_delay = 0, children}: TypewriterProps) => {
   const text = children?.toString() || "";
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(" ".repeat(text.length));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
 

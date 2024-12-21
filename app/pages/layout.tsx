@@ -7,14 +7,14 @@ const Layout = ({
   }>) => {
 
     return (
-        <div className="min-h-screen flex justify-center">
-            <Nano />
-            <div className="m-5">
-                {children}
-            </div>
+      <>
+        <Nano />
+        <div className="min-h-screen flex justify-center m-5"> 
+          {children}
         </div>
+      </>
+      
     )
-
 }
 
-export default Layout;
+export default Layout; 
