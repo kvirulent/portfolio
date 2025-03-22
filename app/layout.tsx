@@ -1,3 +1,4 @@
+// Global layout
 import type { Metadata } from "next";
 import { Source_Code_Pro } from "next/font/google";
 import Script from "next/script";
@@ -26,11 +27,11 @@ export default function RootLayout({
         src="//gc.zgo.at/count.js"
       />
       <body className={`${scp.className}`}>
-        <div className="fixed w-screen h-screen fixed z-[50] pointer-events-none crt"></div>
+        <div id="crt" className="fixed w-screen h-screen fixed z-[50] pointer-events-none crt"></div>
         {/* Goatcounter count display */}
         <Link
           href="https://www.goatcounter.com/"
-          className="z-[40] blur-[0.5px] fixed left-0 bottom-0 text-amber glow p-2"
+          className="z-[40] fixed left-0 bottom-0 text-amber glow p-2"
         >
           <GoatCounter />
         </Link>

@@ -1,4 +1,4 @@
-"use client";
+// Index route
 import Startup from "@/app/ui/startup";
 import Link from "next/link";
 import CubeAnimation from "@/app/ui/cube2";
@@ -10,11 +10,11 @@ export default function Home() {
       {/* Page Content */}
       <div className="flex items-center justify-center">
         <div className="text-amber-dim md:text-amber max-md:w-fit max-md:mx-auto max-md:absolute md:flex-1 h-screen flex items-center justify-center">
-          <div className="fixed z-[1] cursor-default">
+          <div className="fixed pointer-events-none">
             <CubeAnimation size={190} />
           </div>
         </div>
-        <div className="md:flex-1 h-screen flex flex-col items-center justify-center">
+        <div className="md:flex-1 h-screen flex flex-col z-[10] items-center justify-center">
           <h1 className="text-4xl md:text-6xl m-5 mb-0">xirulent.dev</h1>
           <div className="flex flex-row justify-center items-center w-full">
             <Link href="https://github.com/kvirulent" className="hover:box-glow hover:bg[#FFB000] hover:text-black">
@@ -27,9 +27,12 @@ export default function Home() {
               <Image className="blacken p-1 ml-2 mr-2" src="/rblx_amber.png" width={32} height={32} alt="roblox donut" />
             </Link>
           </div>
-          <ul>
+          <ul className="">
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
               <Link href="/pages/about-me">&gt; who r u?</Link>
+            </li>
+            <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
+              <Link href="/pages/yapping">&gt; yapping</Link>
             </li>
             <li className="m-5 w-fit hover:box-glow-invalid hover:text-white">
               <Link href="#">⚿ option_3</Link>

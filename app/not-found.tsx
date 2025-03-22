@@ -12,7 +12,7 @@ const Page = () => {
       <p className="text-amber glow">
         cd : Cannot find path &apos;@{path}&apos; because it does not exist.
       </p>
-      <Link href="/" className="text-amber glow text-xs m-4">
+      <Link href="/" className="text-amber glow text-xs m-4 hover:underline">
         Back to safety...
       </Link>
     </main>

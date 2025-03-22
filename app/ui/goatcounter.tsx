@@ -12,11 +12,10 @@ const GoatCounter = () => {
     fetch("https://xirulent.goatcounter.com/counter//.json").then((res) => res.json().then((data) => {
       setUniqueVisits(data.count_unique);
       setNonUniqueVisits(data.count);
-      console.log("If the visitor counter is stuck on Loading, your ad blocker likely blocked the request to the API. This page has no ads, so I recommend turning your adblocker off. -KV")
     }))
   })
 
-  return <p>{uniqueVisits ? uniqueVisits : "Loading..."}</p>;
+  return <p title={uniqueVisits ? "" : "Try disabling your adblock if this is stuck loading."}>{uniqueVisits ? uniqueVisits : "Loading..."}</p>;
 };
 
 export default GoatCounter;

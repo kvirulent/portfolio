@@ -1,3 +1,4 @@
+// Reveals text with a scrambling effect.
 "use client";
 import { useState, useEffect } from 'react';
 
@@ -45,7 +46,7 @@ const Scramble = ({ interval, delay = 0, children}: ScrambleProps) => {
             return () => {
                 intervals.forEach(clearInterval);
             };
-        };
+        }; 
 
         scrambleText();
 

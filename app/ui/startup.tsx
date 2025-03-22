@@ -1,4 +1,4 @@
-// Simple splashscreen with mobile device incompatibility warning
+// Simple splashscreen with mobile device compatibility warning.
 "use client";
 import { useState } from "react";
 

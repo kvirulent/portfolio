@@ -19,7 +19,7 @@ const CopyClick = ({displayText, copyText}: CopyClickProps) => {
     }
 
     return (
-        <div className="cursor-pointer" onClick={copy}>{innerText}</div>
+        <div className="cursor-pointer hover:underline" onClick={copy}>{innerText}</div>
     )
 }
 

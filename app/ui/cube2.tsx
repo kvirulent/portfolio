@@ -1,4 +1,4 @@
-// Renders a cube in ASCII.
+// Renders a cube in ASCII. 
 // Adapted from Servet Gulnaroglu's cube.c -> https://github.com/servetgulnaroglu/cube.c
 "use client";
 import { useEffect, useState } from "react";
@@ -8,7 +8,7 @@ interface CubeProps {
 }
 
 const CubeAnimation = ({ size = 190 }: CubeProps) => {
-  const [frame, setFrame] = useState<string>("loading cube2.tsx");
+  const [frame, setFrame] = useState<string>("");
 
   useEffect(() => {
     const width: number = 130;

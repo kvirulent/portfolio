@@ -34,6 +34,9 @@ export default function Home() {
             <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
               <Link href="/pages/about-me">&gt; who r u?</Link>
             </li>
+            <li className="m-5 w-fit hover:box-glow hover:bg-[#FFB000] hover:text-black">
+              <Link href="/pages/yapping">&gt; yapping</Link>
+            </li>
             <li className="m-5 w-fit hover:box-glow-invalid hover:text-white">
               <Link href="#">⚿ option_3</Link>
             </li>

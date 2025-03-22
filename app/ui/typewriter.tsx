@@ -1,4 +1,4 @@
-// Component that "types" text into a tag.
+// Component that "types" text into a tag. Text will be wrapped in a <span> tag.
 "use client";
 import { useState, useEffect } from "react";
 
