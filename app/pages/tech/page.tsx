@@ -3,7 +3,7 @@ const Page = () => {
         <main className="m-5">
             <div>
                 <p className="text-5xl w-full m-2 text-amber">Stuff I Know</p>
-                <p>if something you need isn't here, I am always open to learning new stuff</p>
+                <p>if something you need isn&apos;t here, I am always open to learning new stuff</p>
 
                 <p className="text-3xl w-full m-2 mt-10 text-amber">Programming Languages</p>
                 <p className="m-2">All the programming languages I can write professionally</p>

@@ -51,7 +51,7 @@ const Page = () => {
         <div className="flex flex-1 text-right items-center justify-center flex-col mt-20 p-10">
           <div className="text-5xl w-full m-3"><Scramble interval={160}>Experience</Scramble></div>
           <p className="text-white">
-            I have experience in many areas of software development. I'm familiar with lots of languages & libraries as well, but I mostly program in
+            I have experience in many areas of software development. I&apos;m familiar with lots of languages & libraries as well, but I mostly program in
             Lua, C++, and Typescript. I am currently learning to write compute shaders using GLSL and Godot. I specialize in web development 
             and Roblox games. I am familiar with server management, cloudflare, etc.
             For a comprehensive list of technologies I know, <Link href="/pages/tech">see this page.</Link>
