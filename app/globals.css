@@ -94,6 +94,13 @@
     text-shadow: 0 0 20px;
   }
 
+  Link, a {
+    text-decoration: underline;
+  }
+
+  Link:hover, a:hover {
+    color:rgba(var(--amber));
+  }
 }
 
 /* Set background and foreground color*/

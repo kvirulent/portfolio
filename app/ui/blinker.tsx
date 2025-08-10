@@ -12,19 +12,21 @@ const Blinker = ({interval, delay, children}: BlinkerProps) => {
     const [active, setActive] = useState(false);
 
     useEffect(() => {
-        function toggleActive() {
-            setActive(!active)
-        }
-
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             const intervalId = setInterval(() => {
-                toggleActive()
-            }, interval)
+                setActive(prevActive => !prevActive);
+            }, interval);
+
             return () => {
                 clearInterval(intervalId);
             };
         }, delay);
-    }, [active, delay, interval])
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+
+    }, [delay, interval])
 
     return (
         <pre className="inline-block">{active ? children : " ".repeat(children?.toString().length || 0)}</pre>
